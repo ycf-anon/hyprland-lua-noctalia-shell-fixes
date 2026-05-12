@@ -63,20 +63,19 @@ As a result, several features stop working.
 
 ## The Fix
 
-You need to patch this system file:
-
-```
-/etc/xdg/quickshell/noctalia-shell/Services/Compositor/HyprlandService.qml
-```
+A patched version of HyprlandService.qml is included in this repository.
 
 ---
-
 ### Apply Patch (System File)
 
-Because this is a system path, you must use `pkexec`:
+1. Download the fixed `HyprlandService.qml` file from this repository.
+
+2. Replace the original system file:
+
 
 ```bash
-pkexec cp HyprlandService.qml /etc/xdg/quickshell/noctalia-shell/Services/Compositor/HyprlandService.qml
+sudo cp HyprlandService.qml /etc/xdg/quickshell/noctalia-shell/Services/Compositor/HyprlandService.qml
+
 ```
 
 ---
